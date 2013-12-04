@@ -1,0 +1,158 @@
+body{  
+ line-height:1.6em;  
+}  
+
+
+#msg{
+position:adsolute;
+color: #b94a48;
+font-weight:bold;
+font-size:12px;
+font-family: Arial, Helvetica, sans-serif; 
+text-shadow: 0 1px 0 white;
+}
+.olvidoPass{
+font-family: 'Arial',Arial Narrow, sans-serif;
+text-decoration:none;
+font-size: 14px;
+color:#0089e1;
+margin-bottom: 0px;  
+text-shadow: 0 1px 0 white;
+}
+ .olvidoPass:hover{
+font-size: 14px;
+color: #2575CF;
+margin-bottom: 0px;
+text-shadow: 0 1px 0 white;
+ }
+.button {
+font-family: Arial, Helvetica, sans-serif;   
+color: #FFF;
+text-decoration: none;
+border-top: 0px;
+border-left: 0px;
+border-right: 0px;
+border-bottom: 0px solid rgba(0,0,0,0.25);
+position: relative;
+cursor:pointer;
+font-size:100%;
+width: 90%;
+padding: 10px 10px 10px 10px; 
+background-color: #0089e1;
+} 
+.button :hover{
+ background-color: #2575CF;    
+}
+.button:active{ 
+top: 1px;
+}
+/**********************CUERPO************************/
+#cuerpo{
+    width:100%;
+    height:auto;
+    background-color:#fff;
+    margin:auto;
+    padding-top: 10%
+}
+.escudo{
+  float:left; 
+  position:relative;
+  
+  height:auto ;
+  width:200px; 
+}
+
+.separador{
+   float:left;
+   position:relative;
+   width: 1%;
+   height: 400px;
+   background-color: #c9c9c9;
+   
+}
+
+#login{
+  
+ position:relative;
+ margin-left: 10%;
+ margin-top: 200px;
+ width: 70%;
+}
+
+h1{
+    color:#444444;
+    font-size:270%;
+   text-shadow: 0 1px 0 white;
+    font-family: 'Arial narrow', sans-serif;
+    font-weight: normal;
+    margin: 0px 0px 0px 0px;
+    padding-bottom: 10px;
+}
+
+#login input{
+  margin-top: 30px;  
+}
+#login button{
+  margin-top: 20px;  
+}
+
+.cajaTexto{
+                outline: none;
+                width: 80%;
+                padding: 15px 10px 10px 15px; 
+		color: #000000; 
+		font-family: Arial, Helvetica, sans-serif;   
+		font-size: 100%; 
+		border: 1px solid #c9c9c9 ;
+}
+.cajaTexto:focus{
+                outline: 0;
+		border: 1px solid #000000;
+}
+
+.mensaje{
+    margin-top: 10px;
+    color:#444444;
+    font-size: 14px;
+    text-shadow: 0 1px 0 white;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    margin: 0px 0px 0px 0px; 
+}
+/******************FIN CUERPO**************************/
+/**********************FOOTER**********************/
+#footer{
+    border-top: 2px solid #c9c9c9;
+    width:100%;
+    margin-bottom:10px; 
+    position:absolute;
+    bottom: 10px;
+    background-color: white;
+}
+
+#opcionesFooter{
+   position: relative;
+    margin-left: 8%;
+    margin-top: 1.5%; 
+    float:left;
+}
+#opcionesFooter li{
+    display: inline
+      
+}
+#opcionesFooter li a{
+   display: block;
+    float: left;
+    color: #666;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Arial',Arial Narrow, sans-serif;
+    padding-left: 40px;
+}
+
+#opcionesFooter li a:hover {
+    color:#000;	     
+}
+
+/********FIN DE EL FOOTER*****************/

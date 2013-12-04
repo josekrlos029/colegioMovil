@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns		= "http://www.w3.org/ns/widgets"
+	xmlns:gap	= "http://phonegap.com/ns/1.0"
+	id		= "com.deRumba.deRumba"
+	version 	= "1.0.0">
+
+	<name>Liceo Galois</name>
+
+	<description>
+		Con esta Aplicación podras estar enterado de la parte academica de la institución.
+	</description>
+
+	<author href="https://www.facebook.com/josekrlos029"
+		email="josekrlos029@hotmail.com">
+		José Carlos Jimenez Montenegro 
+	</author>
+
+<preference name="phonegap-version" value="2.1.0" />
+	<gap:platforms>
+		<gap:platform name="android" minVersion="2.1" />
+		<gap:platform name="webos" />
+		<gap:platform name="symbian.wrt" />
+		<gap:platform name="blackberry" project="widgets"/>
+                <gap:platform name="ios" />
+	</gap:platforms>
+
+	<icon src="icono.png" gap:role="default" />
+	<icon src="icono.png" width="96" height="96" />
+	<icon src="icono.png" width="72" height="72" />
+	<icon src="icono.png" width="48" height="48" />
+	<icon src="icono.png" width="36" height="36" />
+
+    <gap:splash src="icono.png" />
+
+	<feature name="http://api.phonegap.com/1.0/geolocation"/>
+	<feature name="http://api.phonegap.com/1.0/network"/>
+
+</widget>
