@@ -25,7 +25,7 @@
               setTimeout("$('#msg').hide();", 1000);
             }else{
         //esta linea si se moidifica no altera nd? //
-                var url="/colegio/inicio/verificarUsuario";
+                var url="http://liceogalois.com/inicio/verificarUsuarioMovil";
                 var data="usuario="+usuario.value+"&clave="+contraseña.value;
 
                 envioJson(url,data,function respuesta(res){   
@@ -37,7 +37,10 @@
                         contraseña.value="";
                         setTimeout("$('#msg').hide();", 2000);
                     }else{
-                        document.location.href=res;
+                        var vec = res.split(",");
+                        localStorage.setItem('idPersona',vec[1]);
+                        document.location.href=vec[0];
+                        
                     }
                  });
             }   
