@@ -30,13 +30,13 @@
 
                 envioJson(url,data,function respuesta(res){   
                     if (res == 0){
-                        var div = document.getElementById("msg");
-                        x.html ( "<p>Usuario o Contraseña Incorrectos</p>");
+                        $("#msg").html ( "<p>Usuario o Contraseña Incorrectos</p>");
                         usuario.value="";
                         usuario.setAttribute("autofocus","true");
                         contraseña.value="";
                         setTimeout("$('#msg').hide();", 2000);
                     }else{
+                        alert(res);
                         var vec = res.split(",");
                         localStorage.setItem('idPersona',vec[1]);
                         document.location.href=vec[0];
