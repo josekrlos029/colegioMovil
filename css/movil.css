@@ -1,0 +1,57 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8/12/2013, 08:18:08 AM
+    Author     : JoseCarlos
+*/
+
+.ui-icon-notas:after {
+    background-image: url("../imagenes/iconos/actualizar.png");
+    /* Make your icon fit */
+    background-size: 17px 17px;
+}
+
+.ui-icon-notas-black:after {
+    background-image: url("../imagenes/iconos/actualizar-black.png");
+    /* Make your icon fit */
+    background-size: 17px 17px;
+}
+
+.ui-icon-seguimiento:after {
+    background-image: url("../imagenes/iconos/consolidados.png");
+    /* Make your icon fit */
+    background-size: 17px 17px;
+}
+
+.ui-icon-seguimiento-black:after {
+    background-image: url("../imagenes/iconos/consolidados-black.png");
+    /* Make your icon fit */
+    background-size: 17px 17px;
+}
+
+.ui-icon-pension:after {
+    background-image: url("../imagenes/iconos/pagos.png");
+    /* Make your icon fit */
+    background-size: 17px 17px;
+}
+
+.ui-icon-pension-black:after {
+    background-image: url("../imagenes/iconos/pagos-black.png");
+    /* Make your icon fit */
+    background-size: 17px 17px;
+}
+
+.ui-icon-noti:after {
+    background-image: url("../imagenes/iconos/notificacion.png");
+    /* Make your icon fit */
+    background-size: 17px 17px;
+}
+
+.ui-icon-noti-black:after {
+    background-image: url("../imagenes/iconos/notificacion-black.png");
+    /* Make your icon fit */
+    background-size: 17px 17px;
+}
