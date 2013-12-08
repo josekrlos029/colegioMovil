@@ -50,8 +50,14 @@ and open the template in the editor.
                             });
                           
                 }
+                
+                function cargarNotas2(){
+                    //alert(localStorage.getItem('idPersona'));
+                    $('#content').load('http://liceogalois.com/estudiante/datosAcademicosMovil/'+localStorage.getItem('idPersona')); 
+                          
+                }
                
-               cargarNotas();
+               cargarNotas2();
             });
             
             
@@ -59,8 +65,8 @@ and open the template in the editor.
     </head>
     <body>
         <div data-role="page">
-            <div data-role="panel" data-position="left" data-display="reveal" id="panelEst">
-                <p>Suaveeeeeeeeeeeeuu</p>
+            <div data-role="panel" data-position="left" data-display="push" id="panelEst">
+                <p>Recargar</p>
             </div><!-- /panel -->
             
             <div data-role="header" data-position="fixed"> 

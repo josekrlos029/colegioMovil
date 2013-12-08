@@ -27,6 +27,10 @@ function envioJson2(url,data,respuesta){
 				data:	data,
 				url:	url,
 				dataType:"html",
+                                error: function(objeto, quepaso, otroobj){
+            alert("Estas viendo esto por que fallé");
+            alert("Pasó lo siguiente: "+quepaso);
+        },
 				success: function(data){
                                     
 				    //var json=JSON.decode( data );
