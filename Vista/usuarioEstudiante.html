@@ -37,7 +37,7 @@ and open the template in the editor.
                 });
                 
                 function cargarNotas(){
-                    alert(localStorage.getItem('idPersona'));
+                    //alert(localStorage.getItem('idPersona'));
                     var x = $("#content");
                     x.html ("<p>Cargando...</p>");
 
@@ -45,7 +45,7 @@ and open the template in the editor.
                            var url="http://liceogalois.com/estudiante/datosAcademicosMovil";
                            var data="idPersona="+idPersona;
 
-                           envioJson(url,data,function respuesta(res){   
+                           envioJson2(url,data,function respuesta(res){   
                                x.html(res);
                             });
                           
