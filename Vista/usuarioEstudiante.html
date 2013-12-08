@@ -35,7 +35,22 @@ and open the template in the editor.
                     $("#seguimiento").addClass("ui-icon-seguimiento-black");
                     $("#notificacion").addClass("ui-icon-notificacion-black");
                 });
+                
+                function cargarNotas(){
+                    var x = $("#content");
+                    x.html ("<p>Cargando...</p>");
+
+                    var idPersona = localStorage.getItem('idPersona');
+                           var url="http://liceogalois.com/estudiante/datosAcademicosMovil";
+                           var data="idPersona="+idPersona;
+
+                           envioJson2(url,data,function respuesta(res){   
+                               x.html(res);
+                            });
+                          
+                }
                
+               cargarNotas();
             });
             
             
@@ -52,7 +67,7 @@ and open the template in the editor.
                <a href="#panelEst" data-display="overlay" data-icon="bars" class="ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext">Delete</a>
             </div>
             
-            <div id="content">Por aqui vamos mi gente !!</div>
+            <div id="content">Bienvenido... !</div>
             
             <div data-role="footer" data-position="fixed">
                 <div data-role="navbar" data-theme="a" class="ui-nodisc-icon">

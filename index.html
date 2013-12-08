@@ -36,11 +36,9 @@
                         contraseña.value="";
                         setTimeout("$('#msg').hide();", 2000);
                     }else{
-                        alert(res);
                         var vec = res.split(",");
                         localStorage.setItem('idPersona',vec[1]);
                         document.location.href=vec[0];
-                        
                     }
                  });
             }   
