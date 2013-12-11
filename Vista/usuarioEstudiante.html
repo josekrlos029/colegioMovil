@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Usuario Estudiante</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
         <link href="../css/movil.css" rel="stylesheet" type="text/css" media="screen"/>
@@ -20,20 +20,38 @@ and open the template in the editor.
             $(document).ready(function(){
                 $("#notas").removeClass("ui-icon-notas-black");
                 $("#notas").addClass("ui-icon-notas");
+                
                 $("#notas").click(function(){
+                    cargarNotas2();
                     $("#notas").removeClass("ui-icon-notas-black");
                     $("#notas").addClass("ui-icon-notas");
                     $("#pension").addClass("ui-icon-pension-black");
                     $("#seguimiento").addClass("ui-icon-seguimiento-black");
-                    $("#notificacion").addClass("ui-icon-notificacion-black");
+                    $("#notificacion").addClass("ui-icon-noti-black");
                 });
                 
                 $("#pension").click(function(){
                     $("#pension").removeClass("ui-icon-pension-black");
-                    $("#pension").addClass("ui-pension-notas");
+                    $("#pension").addClass("ui-icon-pension");
                     $("#notas").addClass("ui-icon-notas-black");
                     $("#seguimiento").addClass("ui-icon-seguimiento-black");
-                    $("#notificacion").addClass("ui-icon-notificacion-black");
+                    $("#notificacion").addClass("ui-icon-noti-black");
+                });
+                
+                $("#notificacion").click(function(){
+                    $("#notificacion").removeClass("ui-icon-noti-black");
+                    $("#notificacion").addClass("ui-icon-noti");
+                    $("#notas").addClass("ui-icon-notas-black");
+                    $("#seguimiento").addClass("ui-icon-seguimiento-black");
+                    $("#pension").addClass("ui-icon-pension-black");
+                });
+                
+                $("#seguimiento").click(function(){
+                    $("#seguimiento").removeClass("ui-icon-seguimiento-black");
+                    $("#seguimiento").addClass("ui-icon-seguimiento");
+                    $("#notas").addClass("ui-icon-notas-black");
+                    $("#pension").addClass("ui-icon-pension-black");
+                    $("#notificacion").addClass("ui-icon-noti-black");
                 });
                 
                 function cargarNotas(){
@@ -53,6 +71,7 @@ and open the template in the editor.
                 
                 function cargarNotas2(){
                     //alert(localStorage.getItem('idPersona'));
+                     $('#content').html("<p>Cargando....</p>");
                     $('#content').load('http://liceogalois.com/estudiante/datosAcademicosMovil/'+localStorage.getItem('idPersona')); 
                           
                 }
@@ -80,9 +99,9 @@ and open the template in the editor.
                 <div data-role="navbar" data-theme="a" class="ui-nodisc-icon">
                 <ul>
                     <li><a href="#" data-theme="a" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-top ui-icon-notas-black ui-btn-inline ui-btn-active" id="notas">Notas</a></li>
-                    <li><a href="#" data-theme="a" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-top ui-icon-seguimiento-black ui-btn-inline" id="pension">Pensión</a></li>
+                    <li><a href="#" data-theme="a" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-top ui-icon-pension-black ui-btn-inline" id="pension">Pensión</a></li>
                     <li><a href="#" data-theme="a" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-top ui-icon-seguimiento-black ui-btn-inline" id="seguimiento">Seguimiento</a></li>
-                    <li><a href="#" data-theme="a" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-top ui-icon-seguimiento-black ui-btn-inline" id="notificacion">Notificaciones</a></li>
+                    <li><a href="#" data-theme="a" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-top ui-icon-noti-black ui-btn-inline" id="notificacion">Notificaciones</a></li>
                 </ul>
                 </div><!-- /navbar -->
             </div><!-- /footer -->
