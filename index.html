@@ -8,19 +8,20 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
         <link href="css/login.css" rel="stylesheet" type="text/css" media="screen"/>
+        <script src="phonegap.js" type="text/javascript"></script>
         <script src="js/jquery-1.10.2.min.js" type="text/javascript" ></script>
         <script src="js/envios.js" type="text/javascript" ></script>
-        <script src="phonegap.js" type="text/javascript"></script>
+        
         <script type="text/javascript">
          
          document.addEventListener("deviceready", function(){
              
              navigator.notification.alert("Este Es un Mensaje", function(){}, "Prueba", "Aceptar");
              
-         }, false);
+         }, true);
          
          
-        function envio(){ 
+         ufunction envio(){ 
          var x = $("#msg");
          x.html ("<p>Cargando...</p>");
          x.show("slow");
@@ -33,7 +34,7 @@
               setTimeout("$('#msg').hide();", 1000);
             }else{
         //esta linea si se moidifica no altera nd? //
-                var url="http://liceogalois.com/inicio/verificarUsuarioMovil";
+                varrl="http://liceogalois.com/inicio/verificarUsuarioMovil";
                 var data="usuario="+usuario.value+"&clave="+contraseña.value;
 
                 envioJson(url,data,function respuesta(res){   
