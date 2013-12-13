@@ -26,7 +26,7 @@
               setTimeout("$('#msg').hide();", 1000);
             }else{
         //esta linea si se moidifica no altera nd? //
-                varrl="http://liceogalois.com/inicio/verificarUsuarioMovil";
+                var url="http://liceogalois.com/inicio/verificarUsuarioMovil";
                 var data="usuario="+usuario.value+"&clave="+contraseña.value;
 
                 envioJson(url,data,function respuesta(res){   
