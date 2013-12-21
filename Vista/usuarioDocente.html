@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Usuario Estudiante</title>
+        <title>Usuario Docente</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
         <link href="../css/movil.css" rel="stylesheet" type="text/css" media="screen"/>
@@ -53,30 +53,22 @@ and open the template in the editor.
                     $("#pension").addClass("ui-icon-pension-black");
                     $("#notificacion").addClass("ui-icon-noti-black");
                 });
-                
-                function cargarNotas(){
+  
+                function ingresoNotas(){
                     //alert(localStorage.getItem('idPersona'));
-                    var x = $("#content");
-                    x.html ("<p>Cargando...</p>");
-
-                    var idPersona = localStorage.getItem('idPersona');
-                           var url="http://liceogalois.com/estudiante/datosAcademicosMovil";
-                           var data="idPersona="+idPersona;
-
-                           envioJson2(url,data,function respuesta(res){   
-                               x.html(res);
-                            });
+                     $('#content').html("<p>Cargando....</p>");
+                    $('#content').load('http://liceogalois.com/docente/ingresoNotasMovil/'+localStorage.getItem('idPersona')); 
                           
                 }
                 
-                function cargarNotas2(){
-                    //alert(localStorage.getItem('idPersona'));
+                function inicio(){
+                  
                      $('#content').html("<p>Cargando....</p>");
-                    $('#content').load('http://liceogalois.com/estudiante/datosAcademicosMovil/'+localStorage.getItem('idPersona')); 
+                    $('#content').load('http://liceogalois.com/docente/datosAcademicosMovil/'+localStorage.getItem('idPersona')); 
                           
                 }
                
-               cargarNotas2();
+               inicio();
             });
             
             
@@ -84,24 +76,25 @@ and open the template in the editor.
     </head>
     <body>
         <div data-role="page">
-            <div data-role="panel" data-position="left" data-display="push" id="panelEst">
+            <div data-role="panel"  data-position="left" data-display="push" id="panelEst">
                 <p>Recargar</p>
             </div><!-- /panel -->
             
-            <div data-role="header" data-position="fixed"> 
+            <div data-role="header" data-theme="b" data-position="fixed"> 
                 <h1>Liceo Galois</h1>
                <a href="#panelEst" data-display="overlay" data-icon="bars" class="ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext">Delete</a>
+               <a href="#" onclick="inicio()" data-display="overlay" data-icon="home" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext">Delete</a>
             </div>
             
             <div id="content">Bienvenido... !</div>
             
             <div data-role="footer" data-position="fixed">
-                <div data-role="navbar" data-theme="a" class="ui-nodisc-icon">
+                <div data-role="navbar" data-theme="b" class="ui-nodisc-icon">
                 <ul>
-                    <li><a href="#" data-theme="a" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-top ui-icon-notas-black ui-btn-inline ui-btn-active" id="notas">Notas</a></li>
-                    <li><a href="#" data-theme="a" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-top ui-icon-pension-black ui-btn-inline" id="pension">Pensión</a></li>
-                    <li><a href="#" data-theme="a" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-top ui-icon-seguimiento-black ui-btn-inline" id="seguimiento">Seguimiento</a></li>
-                    <li><a href="#" data-theme="a" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-top ui-icon-noti-black ui-btn-inline" id="notificacion">Notificaciones</a></li>
+                    <li><a href="#" onclick="ingresoNotas()" data-theme="b" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-top ui-icon-notas-black ui-btn-inline ui-btn-active" id="notas">Notas</a></li>
+                    <li><a href="#" data-theme="b" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-top ui-icon-pension-black ui-btn-inline" id="pension">Pensión</a></li>
+                    <li><a href="#" data-theme="b" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-top ui-icon-seguimiento-black ui-btn-inline" id="seguimiento">Seguimiento</a></li>
+                    <li><a href="#" data-theme="b" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-top ui-icon-noti-black ui-btn-inline" id="notificacion">Notificaciones</a></li>
                 </ul>
                 </div><!-- /navbar -->
             </div><!-- /footer -->
