@@ -8,6 +8,18 @@ and open the template in the editor.
     Author     : JoseCarlos
 */
 
+.ui-icon-logros:after {
+    background-image: url("../imagenes/iconos/gestionarMaterias.png");
+    /* Make your icon fit */
+    background-size: 17px 17px;
+}
+
+.ui-icon-logros-black:after {
+    background-image: url("../imagenes/iconos/gestionarMaterias-black.png");
+    /* Make your icon fit */
+    background-size: 17px 17px;
+}
+
 .ui-icon-notas:after {
     background-image: url("../imagenes/iconos/actualizar.png");
     /* Make your icon fit */
@@ -55,3 +67,81 @@ and open the template in the editor.
     /* Make your icon fit */
     background-size: 17px 17px;
 }
+
+.botonRed {
+	background-color:#d45b60;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border-radius:20px;
+	//border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#fff;
+	font-size:16px;
+	padding:8px 20px;
+	
+}
+.table, .table td, .table tr {
+    padding:0px;
+    border-spacing: 0px;
+}
+ 
+.table {
+    border:1px black solid;
+    border-radius:5px;
+    mibn-width:400px;
+    font-family: Helvetica,Arial;
+}
+ 
+.table td {
+    padding:6px;
+}
+ 
+.table tr:first-child td:first-child {
+    border-radius:5px 0px 0px 0px;
+}
+ 
+.table tr:first-child td:last-child {
+    border-radius:0px 5px 0px 0px;
+}
+ 
+.table tr:last-child td:first-child {
+    border-radius:0px 0px 0px 5px;
+}
+ 
+.table tr:last-child td:last-child {
+    border-radius:0px 0px 5px 0px;
+}
+ 
+.table td:not(:last-child) {
+    border-right:1px #666 solid;
+}
+ 
+ 
+.table tr:nth-child(2n) {
+    background: #fff;
+}
+ 
+.table tr:nth-child(2n+1){
+    background: #bec3c7;
+}
+ 
+.table.header tr:not(:first-child):hover, .table:not(.header) tr:hover {
+    background:#d45b60;
+}
+ 
+.table:not(.header) tr {
+    text-align: left;
+}
+ 
+.table.header tr:first-child {
+    font-weight: bold;
+    color:#fff;
+    background-color: #444;
+    border-bottom:1px #000 solid;
+}
+ 
+.table.header tr:nth-child(n+2) {
+    text-align: right;
+}
+

@@ -22,7 +22,7 @@ and open the template in the editor.
                 $("#notas").addClass("ui-icon-notas");
                 
                 $("#notas").click(function(){
-                    cargarNotas2();
+                    cargarNotas();
                     $("#notas").removeClass("ui-icon-notas-black");
                     $("#notas").addClass("ui-icon-notas");
                     $("#pension").addClass("ui-icon-pension-black");
@@ -61,6 +61,7 @@ and open the template in the editor.
 
                     var idPersona = localStorage.getItem('idPersona');
                            var url="http://liceogalois.com/estudiante/datosAcademicosMovil";
+                           //var url="/colegio/estudiante/datosAcademicosMovil";
                            var data="idPersona="+idPersona;
 
                            envioJson2(url,data,function respuesta(res){   
@@ -72,11 +73,12 @@ and open the template in the editor.
                 function cargarNotas2(){
                     //alert(localStorage.getItem('idPersona'));
                      $('#content').html("<p>Cargando....</p>");
+                    //$('#content').load('http://liceogalois.com/estudiante/datosAcademicosMovil/'+localStorage.getItem('idPersona')); 
                     $('#content').load('http://liceogalois.com/estudiante/datosAcademicosMovil/'+localStorage.getItem('idPersona')); 
-                          
+                           
                 }
                
-               cargarNotas2();
+               cargarNotas();
             });
             
             

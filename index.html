@@ -25,8 +25,9 @@
               x.html ( "<p>Error: Tiene Campos Vacios</p>");
               setTimeout("$('#msg').hide();", 1000);
             }else{
-        //esta linea si se moidifica no altera nd? //
-                var url="http://liceogalois.com/inicio/verificarUsuarioMovil";
+        
+                //var url="http://liceogalois.com/inicio/verificarUsuarioMovil";
+                var url="/colegio/inicio/verificarUsuarioMovil";
                 var data="usuario="+usuario.value+"&clave="+contraseña.value;
 
                 envioJson(url,data,function respuesta(res){   
@@ -65,7 +66,7 @@
         <div style="margin-top: 5%">
             <table align="center">
                 <tr>
-                    <td align="center"><div class="escudo"> <img src="imagenes/escudo.png" alt="ESCUDO" /></div></td>
+                    <td align="center"><div class="escudo"> <img src="imagenes/escudo.png" alt="ESCUDO" width="150" height="150" /></div></td>
                 </tr>
                 <tr>
                     <td align="center"><h1>Iniciar Sesión</h1></td>
