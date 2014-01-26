@@ -57,7 +57,19 @@ and open the template in the editor.
                 function cargarNotas(){
                     //alert(localStorage.getItem('idPersona'));
                     var x = $("#content");
-                    x.html ("<p>Cargando...</p>");
+                     var $this = $( this ),
+        theme = $this.jqmData( "theme" ) || $.mobile.loader.prototype.options.theme,
+        msgText = $this.jqmData( "msgtext" ) || $.mobile.loader.prototype.options.text,
+        textVisible = $this.jqmData( "textvisible" ) || $.mobile.loader.prototype.options.textVisible,
+        textonly = !!$this.jqmData( "textonly" ),
+        html = $this.jqmData( "html" ) || "";
+    $.mobile.loading( "show", {
+            text: msgText,
+            textVisible: textVisible,
+            theme: theme,
+            textonly: textonly,
+            html: html
+    });
 
                     var idPersona = localStorage.getItem('idPersona');
                            var url="http://liceogalois.com/estudiante/datosAcademicosMovil";
@@ -66,6 +78,7 @@ and open the template in the editor.
 
                            envioJson2(url,data,function respuesta(res){   
                                x.html(res);
+                               $.mobile.loading( "hide" );  
                             });
                           
                 }
@@ -73,8 +86,8 @@ and open the template in the editor.
                 function cargarNotas2(){
                     //alert(localStorage.getItem('idPersona'));
                      $('#content').html("<p>Cargando....</p>");
-                    //$('#content').load('http://liceogalois.com/estudiante/datosAcademicosMovil/'+localStorage.getItem('idPersona')); 
                     $('#content').load('http://liceogalois.com/estudiante/datosAcademicosMovil/'+localStorage.getItem('idPersona')); 
+                    //$('#content').load('/colegio/estudiante/datosAcademicosMovil/'+localStorage.getItem('idPersona')); 
                            
                 }
                

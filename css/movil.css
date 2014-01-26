@@ -145,3 +145,6 @@ and open the template in the editor.
     text-align: right;
 }
 
+.tBlue.table:not(.header) tr:hover {
+    background:#2494de;
+}
