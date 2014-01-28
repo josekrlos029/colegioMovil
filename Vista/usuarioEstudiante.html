@@ -39,6 +39,7 @@ and open the template in the editor.
                 });
                 
                 $("#notificacion").click(function(){
+                    notificaciones();
                     $("#notificacion").removeClass("ui-icon-noti-black");
                     $("#notificacion").addClass("ui-icon-noti");
                     $("#notas").addClass("ui-icon-notas-black");
@@ -81,6 +82,32 @@ and open the template in the editor.
                                $.mobile.loading( "hide" );  
                             });
                           
+                }
+                
+                function notificaciones(){
+                    
+                     var $this = $( this ),
+        theme = $this.jqmData( "theme" ) || $.mobile.loader.prototype.options.theme,
+        msgText = $this.jqmData( "msgtext" ) || $.mobile.loader.prototype.options.text,
+        textVisible = $this.jqmData( "textvisible" ) || $.mobile.loader.prototype.options.textVisible,
+        textonly = !!$this.jqmData( "textonly" ),
+        html = $this.jqmData( "html" ) || "";
+    $.mobile.loading( "show", {
+            text: msgText,
+            textVisible: textVisible,
+            theme: theme,
+            textonly: textonly,
+            html: html
+    });
+            //  var url="/colegio/estudiante/notificacionesMovil";     
+            var url="http://liceogalois.com/estudiante/notificacionesMovil";
+            var data="idPersona="+localStorage.getItem('idPersona');
+
+            envioJson2(url,data,function respuesta(res){
+                $('#content').html(res);
+                $.mobile.loading( "hide" );  
+            });
+                
                 }
                 
                 function cargarNotas2(){

@@ -369,5 +369,15 @@ END BUSCADOR DE CABECERA */
      border-radius: 5px;
 }
 
+#inf-Personal td{
+    border-bottom: 1px solid #d3d9dc;
+    color: #777;
+    padding-top: 10px;
+    padding-bottom: 10px;
+     font-size: 12px;
+    font-weight: bold;
+    font-family: 'Arial',Arial Narrow, sans-serif;
+}
+
 /* FIN DE VENTANA FLOTANTE */
 
