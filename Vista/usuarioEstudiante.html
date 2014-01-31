@@ -20,7 +20,9 @@ and open the template in the editor.
         <script src="../js/envios.js" type="text/javascript" ></script>
         <script src="phonegap.js" type="text/javascript"></script>
         <script>
-            document.addEventListener("deviceready", function(){
+            
+    function onLoad(){
+    document.addEventListener("deviceready", function(){
    
 
     
@@ -30,7 +32,7 @@ and open the template in the editor.
           document.addEventListener("backbutton", onBackKeyDown, true);
           alert("Probando2");*/
     
-    }, true);
+    }, true);}
     
    /*  function onBackKeyDown() {
         navigator.app.exitApp();
