@@ -121,7 +121,9 @@ and open the template in the editor.
                 }
                
                cargarNotas();
-               onLoad();
+               
+    
+            });
     function onLoad() {
           document.addEventListener("deviceready", onDeviceReady, false);
      }
@@ -130,6 +132,7 @@ and open the template in the editor.
          document.addEventListener("pause", onPause, false);
           document.addEventListener("offline", onOffline, false);
           document.addEventListener("backbutton", onBackKeyDown, true);
+          alert("Probando");
     }
     
     function onBackKeyDown() {
@@ -145,13 +148,11 @@ and open the template in the editor.
     
     function onOffline() {
      alert("Sin conexion my bby");
-    }
-            });
-            
+    }        
             
         </script>
     </head>
-    <body>
+    <body onload="onLoad()">
         <div data-role="page">
             <div data-role="panel" data-position="left" data-display="push" id="panelEst">
                 <p>Recargar</p>
