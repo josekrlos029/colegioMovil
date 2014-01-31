@@ -21,6 +21,10 @@ and open the template in the editor.
         <script src="phonegap.js" type="text/javascript"></script>
         <script>
             
+            
+            $(document).ready(function(){
+                
+                
             document.addEventListener("deviceready", function(){
    
 
@@ -32,8 +36,21 @@ and open the template in the editor.
           alert("Probando2");
     
     }, true);
-            
-            $(document).ready(function(){
+    
+     function onBackKeyDown() {
+        navigator.app.exitApp();
+    }
+
+    // Handle the pause event
+    //
+    function onPause() {
+       setTimeout("alert('Pausa Mi viejou')", 50000);
+        navigator.notification.vibrate(2000);
+    }
+    
+    function onOffline() {
+     alert("Sin conexion my bby");
+    }
                 $("#notas").removeClass("ui-icon-notas-black");
                 $("#notas").addClass("ui-icon-notas");
                 
@@ -138,22 +155,7 @@ and open the template in the editor.
                
     
             });
-   
-         
-    function onBackKeyDown() {
-        navigator.app.exitApp();
-    }
-
-    // Handle the pause event
-    //
-    function onPause() {
-       setTimeout("alert('Pausa Mi viejou')", 50000);
-        navigator.notification.vibrate(2000);
-    }
-    
-    function onOffline() {
-     alert("Sin conexion my bby");
-    }        
+           
             
         </script>
     </head>
