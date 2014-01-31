@@ -55,10 +55,31 @@
         }
 
         document.addEventListener("deviceready", function(){
-             
+            
+        alert("Probando1");
+         document.addEventListener("pause", onPause, false);
+          document.addEventListener("offline", onOffline, false);
+          document.addEventListener("backbutton", onBackKeyDown, true);
+          alert("Probando2");
             
              
          }, true);
+         
+         function onBackKeyDown() {
+        navigator.app.exitApp();
+    }
+
+    // Handle the pause event
+    //
+    function onPause() {
+       setTimeout("alert('Pausa Mi viejou')", 5000);
+        navigator.notification.vibrate(2000);
+    }
+    
+    function onOffline() {
+     alert("Sin conexion my bby");
+    }        
+            
         </script>
     </head>
     
