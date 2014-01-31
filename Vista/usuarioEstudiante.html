@@ -36,6 +36,7 @@ and open the template in the editor.
                 });
                 
                 $("#pension").click(function(){
+                    pension();
                     $("#pension").removeClass("ui-icon-pension-black");
                     $("#pension").addClass("ui-icon-pension");
                     $("#notas").addClass("ui-icon-notas-black");
@@ -53,6 +54,7 @@ and open the template in the editor.
                 });
                 
                 $("#seguimiento").click(function(){
+                    seguimiento();
                     $("#seguimiento").removeClass("ui-icon-seguimiento-black");
                     $("#seguimiento").addClass("ui-icon-seguimiento");
                     $("#notas").addClass("ui-icon-notas-black");
@@ -113,7 +115,56 @@ and open the template in the editor.
                 $('#content').html(res);
                 $.mobile.loading( "hide" );  
             });
-            
+                }
+            function seguimiento(){
+                    
+                     var $this = $( this ),
+                        theme = $this.jqmData( "theme" ) || $.mobile.loader.prototype.options.theme,
+                        msgText = $this.jqmData( "msgtext" ) || $.mobile.loader.prototype.options.text,
+                        textVisible = $this.jqmData( "textvisible" ) || $.mobile.loader.prototype.options.textVisible,
+                        textonly = !!$this.jqmData( "textonly" ),
+                        html = $this.jqmData( "html" ) || "";
+                    $.mobile.loading( "show", {
+                            text: msgText,
+                            textVisible: textVisible,
+                            theme: theme,
+                            textonly: textonly,
+                            html: html
+                    });
+            //  var url="/colegio/estudiante/notificacionesMovil";     
+            var url="http://liceogalois.com/estudiante/seguimientoMovil";
+            var data="idPersona="+localStorage.getItem('idPersona');
+
+            envioJson2(url,data,function respuesta(res){
+                $('#content').html(res);
+                $.mobile.loading( "hide" );  
+            });
+        }
+        
+           function pension(){
+                    
+                     var $this = $( this ),
+                        theme = $this.jqmData( "theme" ) || $.mobile.loader.prototype.options.theme,
+                        msgText = $this.jqmData( "msgtext" ) || $.mobile.loader.prototype.options.text,
+                        textVisible = $this.jqmData( "textvisible" ) || $.mobile.loader.prototype.options.textVisible,
+                        textonly = !!$this.jqmData( "textonly" ),
+                        html = $this.jqmData( "html" ) || "";
+                    $.mobile.loading( "show", {
+                            text: msgText,
+                            textVisible: textVisible,
+                            theme: theme,
+                            textonly: textonly,
+                            html: html
+                    });
+            //  var url="/colegio/estudiante/notificacionesMovil";     
+            var url="http://liceogalois.com/estudiante/pensionMovil";
+            var data="idPersona="+localStorage.getItem('idPersona');
+
+            envioJson2(url,data,function respuesta(res){
+                $('#content').html(res);
+                $.mobile.loading( "hide" );  
+            });
+        }
         
                 function cargarNotas2(){
                     //alert(localStorage.getItem('idPersona'));
@@ -123,7 +174,7 @@ and open the template in the editor.
                            
                 }
                 
-                }
+                
                 
                cargarNotas();
     
@@ -149,12 +200,11 @@ and open the template in the editor.
     // Handle the pause event
     //
     function onPause() {
-       setTimeout("alert('Pausa Mi viejou')", 50000);
-        navigator.notification.vibrate(2000);
+      
     }
     
     function onOffline() {
-     alert("Sin conexion my bby");
+        alert("Por Favor Conectese a una Red");
     }
            
         </script>
