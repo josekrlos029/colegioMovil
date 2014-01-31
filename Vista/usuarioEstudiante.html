@@ -117,7 +117,11 @@ and open the template in the editor.
                 
                 }
                 
-                function cargarNotas2(){
+               
+    
+            });
+            
+             function cargarNotas2(){
                     //alert(localStorage.getItem('idPersona'));
                      $('#content').html("<p>Cargando....</p>");
                     $('#content').load('http://liceogalois.com/estudiante/datosAcademicosMovil/'+localStorage.getItem('idPersona')); 
@@ -125,14 +129,11 @@ and open the template in the editor.
                            
                 }
                
-               cargarNotas();
                
-    
-            });
-            
+               
             document.addEventListener("deviceready", function(){
    
-         
+         cargarNotas();
          document.addEventListener("pause", onPause, false);
           document.addEventListener("offline", onOffline, false);
           document.addEventListener("backbutton", onBackKeyDown, true);
