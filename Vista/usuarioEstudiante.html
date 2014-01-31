@@ -124,15 +124,16 @@ and open the template in the editor.
                
     
             });
-    function onLoad() {
+   
           document.addEventListener("deviceready", onDeviceReady, false);
-     }
+   
 
      function onDeviceReady() {
+         alert("Probando1");
          document.addEventListener("pause", onPause, false);
           document.addEventListener("offline", onOffline, false);
           document.addEventListener("backbutton", onBackKeyDown, true);
-          alert("Probando");
+          alert("Probando2");
     }
     
     function onBackKeyDown() {
