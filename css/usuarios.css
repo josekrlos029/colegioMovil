@@ -65,7 +65,8 @@ border-bottom: 0px;
 .avatar{
 padding-left: 30px;  
  padding-top: 25px;   
- position: relative;  
+ position: relative;
+ background-color:transparent;
 }
 
 
