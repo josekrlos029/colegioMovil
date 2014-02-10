@@ -44,7 +44,7 @@ and open the template in the editor.
                     });
 
                     var idPersona = localStorage.getItem('idPersona');
-                           var url="http://liceogalois.com/acudiente/usuarioAcudienteMovil";
+                           var url="http://controlacademico.liceogalois.com/acudiente/usuarioAcudienteMovil";
                            //var url="/colegio/estudiante/datosAcademicosMovil";
                            var data="idPersona="+idPersona;
 
@@ -71,7 +71,7 @@ and open the template in the editor.
                             html: html
                     });
             //  var url="/colegio/estudiante/notificacionesMovil";     
-            var url="http://liceogalois.com/estudiante/notificacionesMovil";
+            var url="http://controlacademico.liceogalois.com/estudiante/notificacionesMovil";
             var data="idPersona="+localStorage.getItem('idPersona');
 
             envioJson2(url,data,function respuesta(res){
@@ -95,7 +95,7 @@ and open the template in the editor.
                             html: html
                     });
             //  var url="/colegio/estudiante/notificacionesMovil";     
-            var url="http://liceogalois.com/estudiante/seguimientoMovil";
+            var url="http://controlacademico.liceogalois.com/estudiante/seguimientoMovil";
             var data="idPersona="+localStorage.getItem('idPersona');
 
             envioJson2(url,data,function respuesta(res){
@@ -120,7 +120,7 @@ and open the template in the editor.
                             html: html
                     });
             //  var url="/colegio/estudiante/notificacionesMovil";     
-            var url="http://liceogalois.com/estudiante/pensionMovil";
+            var url="http://controlacademico.liceogalois.com/estudiante/pensionMovil";
             var data="idPersona="+localStorage.getItem('idPersona');
 
             envioJson2(url,data,function respuesta(res){
@@ -132,13 +132,43 @@ and open the template in the editor.
                 function cargarNotas2(){
                     //alert(localStorage.getItem('idPersona'));
                      $('#content').html("<p>Cargando....</p>");
-                    $('#content').load('http://liceogalois.com/estudiante/datosAcademicosMovil/'+localStorage.getItem('idPersona')); 
+                    $('#content').load('http://controlacademico.liceogalois.com/estudiante/datosAcademicosMovil/'+localStorage.getItem('idPersona')); 
                     //$('#content').load('/colegio/estudiante/datosAcademicosMovil/'+localStorage.getItem('idPersona')); 
                            
                 }
                 
+                function cargaPanel(){
+                    var $this = $( this ),
+                        theme = $this.jqmData( "theme" ) || $.mobile.loader.prototype.options.theme,
+                        msgText = $this.jqmData( "msgtext" ) || $.mobile.loader.prototype.options.text,
+                        textVisible = $this.jqmData( "textvisible" ) || $.mobile.loader.prototype.options.textVisible,
+                        textonly = !!$this.jqmData( "textonly" ),
+                        html = $this.jqmData( "html" ) || "";
+                    $.mobile.loading( "show", {
+                            text: msgText,
+                            textVisible: textVisible,
+                            theme: theme,
+                            textonly: textonly,
+                            html: html
+                    });
+            //  var url="/colegio/administrador/panelMovil";     
+            var url="http://controlacademico.liceogalois.com/administrador/panelMovil";
+            var data="idPersona="+localStorage.getItem('idPersona');
+
+            
+                if(localStorage.getItem('idAcudiente')===null || localStorage.getItem('idAcudiente')===""){
+                        data += "&panel=1";
+                }else{
+                    data += "&panel=2";
+                }    
+                  
+                  envioJson2(url,data,function respuesta(res){
+                $('#content').html(res);
+                $.mobile.loading( "hide" );  
+                  });
                 
-                
+                }
+                cargaPanel();
                cargarAcudidos();
     
             });
@@ -174,7 +204,7 @@ and open the template in the editor.
     </head>
     <body>
         <div data-role="page" style="background-color: white;">
-            <div data-role="panel" data-position="left" data-display="push" id="panelEst">
+            <div data-role="panel" data-position="left" data-display="push" id="panelEst" class="sombra">
                 <p>Recargar</p>
             </div><!-- /panel -->
             

@@ -80,7 +80,7 @@ and open the template in the editor.
             textonly: textonly,
             html: html
     });
-            var url="http://liceogalois.com/docente/ingresoNotasMovil";
+            var url="http://controlacademico.liceogalois.com/docente/ingresoNotasMovil";
             //var url="/colegio/docente/ingresoNotasMovil";
             var data="idPersona="+localStorage.getItem('idPersona');
 
@@ -107,7 +107,7 @@ and open the template in the editor.
     });
                      
             //  var url="/colegio/docente/actualizarLogrosMovil";     
-            var url="http://liceogalois.com/docente/actualizarLogrosMovil";
+            var url="http://controlacademico.liceogalois.com/docente/actualizarLogrosMovil";
             var data="idPersona="+localStorage.getItem('idPersona');
 
             envioJson2(url,data,function respuesta(res){
@@ -133,7 +133,7 @@ and open the template in the editor.
             html: html
     });
             //  var url="/colegio/docente/asignarSeguimientoMovil";     
-            var url="http://liceogalois.com/docente/asignarSeguimientoMovil";
+            var url="http://controlacademico.liceogalois.com/docente/asignarSeguimientoMovil";
             var data="idPersona="+localStorage.getItem('idPersona');
 
             envioJson2(url,data,function respuesta(res){
@@ -159,7 +159,7 @@ and open the template in the editor.
             html: html
     });
             //  var url="/colegio/docente/notificacionesMovil";     
-            var url="http://liceogalois.com/docente/notificacionesMovil";
+            var url="http://controlacademico.liceogalois.com/docente/notificacionesMovil";
             var data="idPersona="+localStorage.getItem('idPersona');
 
             envioJson2(url,data,function respuesta(res){
@@ -188,7 +188,7 @@ and open the template in the editor.
             html: html
     });
                     //$('#content').load('/colegio/docente/datosAcademicosMovil/'+localStorage.getItem('idPersona')); 
-                    $('#content').load('http://liceogalois.com/docente/datosAcademicosMovil/'+localStorage.getItem('idPersona')); 
+                    $('#content').load('http://controlacademico.liceogalois.com/docente/datosAcademicosMovil/'+localStorage.getItem('idPersona')); 
                      $.mobile.loading( "hide" );           
                 }
                
@@ -226,7 +226,7 @@ and open the template in the editor.
     </head>
     <body>
         <div data-role="page" id="page">
-            <div data-role="panel"  data-position="left" data-display="push" id="panelEst">
+            <div data-role="panel"  data-position="left" data-display="push" id="panelEst" class="sombra">
                 <p>Recargar</p>
             </div><!-- /panel -->
             

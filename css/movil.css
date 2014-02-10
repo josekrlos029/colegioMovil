@@ -148,3 +148,9 @@ and open the template in the editor.
 .tBlue.table:not(.header) tr:hover {
     background:#2494de;
 }
+
+.sombra{
+    -moz-box-shadow:inset -2px 0px 15px #000000;
+-webkit-box-shadow:inset -2px 0px 15px #000000;
+box-shadow:inset -2px 0px 15px #000000;
+}
