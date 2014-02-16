@@ -124,16 +124,16 @@ height:90%;
 #accordion {
  list-style: none;
  padding: 0 0 0 0;
- width: 80%;
+ width: 90%;
  margin-left: 10%;
- margin-top:  5%;
+ margin-top:  3%;
  }
  #accordion span {
  display: block;
- font-size:16px;
+ font-size:12px;
  color:#000;
  cursor: pointer;
- padding: 5px;
+ padding: 3px;
  margin:0;
  background-color:transparent;
  background-position: right center;
@@ -149,7 +149,7 @@ height:90%;
  #accordion ul li {
  cursor: auto;
  padding: 5px;
- width: 80%;
+ width: 90%;
  height: 50%;
  }
  
