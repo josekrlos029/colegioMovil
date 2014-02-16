@@ -153,17 +153,11 @@ and open the template in the editor.
                     });
             //  var url="/colegio/administrador/panelMovil";     
             var url="http://controlacademico.liceogalois.com/administrador/panelMovil";
-            var data="idPersona="+localStorage.getItem('idPersona');
+            var data="idPersona="+localStorage.getItem('idPersona')+"&panel=acudiente";
 
-            
-                if(localStorage.getItem('idAcudiente')===null || localStorage.getItem('idAcudiente')===""){
-                        data += "&panel=1";
-                }else{
-                    data += "&panel=2";
-                }    
                   
                   envioJson2(url,data,function respuesta(res){
-                $('#content').html(res);
+                $('#panelEst').html(res);
                 $.mobile.loading( "hide" );  
                   });
                 
