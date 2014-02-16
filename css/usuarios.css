@@ -124,7 +124,7 @@ height:90%;
 #accordion {
  list-style: none;
  padding: 0 0 0 0;
- width: 90%;
+ width: 95%;
  margin-left: 10%;
  margin-top:  3%;
  }
@@ -148,8 +148,8 @@ height:90%;
  }
  #accordion ul li {
  cursor: auto;
- padding: 5px;
- width: 90%;
+ padding: 3px;
+ width: 95%;
  height: 50%;
  }
  
