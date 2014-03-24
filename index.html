@@ -26,8 +26,8 @@
               setTimeout("$('#msg').hide();", 1000);
             }else{
         
-                var url="http://controlacademico.liceogalois.com/inicio/verificarUsuarioMovil";
-                //var url="/colegio/inicio/verificarUsuarioMovil";
+                //var url="http://controlacademico.liceogalois.com/inicio/verificarUsuarioMovil";
+                var url="/colegio/inicio/verificarUsuarioMovil";
                 var data="usuario="+usuario.value+"&clave="+contraseña.value;
 
                 envioJson(url,data,function respuesta(res){   
