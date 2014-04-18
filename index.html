@@ -63,7 +63,7 @@
           
           var pushNotification = window.plugins.pushNotification;
           alert('pasó');
-          alert(device.platform);
+          alert(window.device.platform);
           
           if ( device.platform == 'android' || device.platform == 'Android' )
             {
@@ -71,7 +71,7 @@
                 pushNotification.register(
                     successHandler,
                     errorHandler, {
-                        "senderID":"745427093313.apps.googleusercontent.com",
+                        "senderID":"745427093313",
                         "ecb":"onNotificationGCM"
                     });
             }
