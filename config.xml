@@ -37,9 +37,12 @@
     <gap:splash src="splash/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
 
     <gap:plugin name="com.phonegap.plugins.pushplugin" version="2.1.1" />
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
 	<feature name="http://api.phonegap.com/1.0/geolocation"/>
 	<feature name="http://api.phonegap.com/1.0/network"/>
         <feature name="http://api.phonegap.com/1.0/notification"/>
-        <feature name="http://api.phonegap.com/1.0/device"/>
+        
 
 </widget>
