@@ -11,6 +11,7 @@
         <script src="js/jquery-1.10.2.min.js" type="text/javascript" ></script>
         <script src="js/envios.js" type="text/javascript" ></script>
         <script src="phonegap.js" type="text/javascript"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8" src="PushNotification.js"></script>
         <script type="text/javascript" charset="utf-8" src="deviceinformation.js"></script>
         <script type="text/javascript">
@@ -62,19 +63,14 @@
           document.addEventListener("offline", onOffline, false);
           document.addEventListener("backbutton", onBackKeyDown, true);
           
-          var deviceInfo = cordova.require("cordova/plugin/DeviceInformation");
-            deviceInfo.get(function(result) {
-                    console.log("result = " + result);
-                }, function() {
-                    console.log("error");
-                });
           
           
-          var pushNotification = window.plugins.pushNotification;
+          
+          //var pushNotification = window.plugins.pushNotification;
           alert('pasó');
           alert(device.platform);
           
-          if ( device.platform == 'android' || device.platform == 'Android' )
+         /* if ( device.platform == 'android' || device.platform == 'Android' )
             {
                 alert("entró android");
                 pushNotification.register(
@@ -96,7 +92,7 @@
                         "ecb":"onNotificationAPN"
                     });
             }
-          
+          */
           
           
          }, true);
