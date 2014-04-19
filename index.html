@@ -13,7 +13,6 @@
         <script src="phonegap.js" type="text/javascript"></script>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8" src="PushNotification.js"></script>
-        <script type="text/javascript" charset="utf-8" src="deviceinformation.js"></script>
         <script type="text/javascript">
          
          function envio(){ 
@@ -67,8 +66,10 @@
           
           
           //var pushNotification = window.plugins.pushNotification;
-          alert('pasó');
-          alert(device.platform);
+          $("#app-status-ul").append('<li>EVENT -> RECEIVED:' + device.platform + '</li>');
+            alert('pasó');
+          
+          alert();
           
          /* if ( device.platform == 'android' || device.platform == 'Android' )
             {
