@@ -64,14 +64,9 @@
           
           
           
-          //var pushNotification = window.plugins.pushNotification;
+          var pushNotification = window.plugins.pushNotification;
           
-            alert('pasó1');
-            alert('pasó2');
-          alert(device.platform);
-          
-          
-         /* if ( device.platform == 'android' || device.platform == 'Android' )
+          if ( device.platform == 'android' || device.platform == 'Android' )
             {
                 alert("entró android");
                 pushNotification.register(
@@ -93,7 +88,7 @@
                         "ecb":"onNotificationAPN"
                     });
             }
-          */
+          
           
           
          }, true);
