@@ -44,8 +44,8 @@ and open the template in the editor.
                     });
 
                     var idPersona = localStorage.getItem('idPersona');
-                           //var url="http://controlacademico.liceogalois.com/acudiente/usuarioAcudienteMovil";
-                           var url="/colegio/estudiante/datosAcademicosMovil";
+                           var url="http://controlacademico.liceogalois.com/acudiente/usuarioAcudienteMovil";
+                           //var url="/colegio/estudiante/datosAcademicosMovil";
                            var data="idPersona="+idPersona;
 
                            envioJson2(url,data,function respuesta(res){   
@@ -151,8 +151,8 @@ and open the template in the editor.
                             textonly: textonly,
                             html: html
                     });
-              var url="/colegio/administrador/panelMovil";     
-            //var url="http://controlacademico.liceogalois.com/administrador/panelMovil";
+             // var url="/colegio/administrador/panelMovil";     
+            var url="http://controlacademico.liceogalois.com/administrador/panelMovil";
             var data="idPersona="+localStorage.getItem('idPersona')+"&panel=acudiente";
 
                   

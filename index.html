@@ -27,8 +27,8 @@
               setTimeout("$('#msg').hide();", 1000);
             }else{
         
-                //var url="http://controlacademico.liceogalois.com/inicio/verificarUsuarioMovil";
-                var url="/colegio/inicio/verificarUsuarioMovil";
+                var url="http://controlacademico.liceogalois.com/inicio/verificarUsuarioMovil";
+                //var url="/colegio/inicio/verificarUsuarioMovil";
                 var data="usuario="+usuario.value+"&clave="+contraseña.value;
 
                 envioJson(url,data,function respuesta(res){   
@@ -57,18 +57,18 @@
 
         document.addEventListener("deviceready", function(){        
         
-          document.addEventListener("pause", onPause, false);
+          //document.addEventListener("pause", onPause, false);
           document.addEventListener("offline", onOffline, false);
           document.addEventListener("backbutton", onBackKeyDown, true);
           
           
-          
+         /* 
           
           var pushNotification = window.plugins.pushNotification;
           
           if ( device.platform == 'android' || device.platform == 'Android' )
             {
-                alert("entró android");
+                
                 pushNotification.register(
                     successHandler,
                     errorHandler, {
@@ -154,18 +154,19 @@
         default:
             $("#app-status-ul").append('<li>EVENT -> Unknown, an event was received and we do not know what it is</li>');
         break;
-      }
+      }*/
     }
     
     
     
     // Handle the pause event
     //
+    /*
     function onPause() {
        setTimeout("alert('Pausa Mi viejou')", 50000);
         navigator.notification.vibrate(2000);
     }
-    
+    */
     function onOffline() {
      alert("Sin conexion my bby");
     }        
